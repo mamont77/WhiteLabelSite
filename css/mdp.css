@@ -1,0 +1,109 @@
+/*@import url("pepper-ginder-custom.css");
+
+ just some styling */
+
+code, pre.code {
+	font: 11px/13px monospace;
+	background-color: #FFC;
+	padding: 2px;
+	border: 1px dotted grey;
+}
+
+.clear {clear: both;}
+
+/*a:hover {text-decoration: underline;}
+disabled this as it was overwriting text-dec:none on hovered links in our default.css
+it doesn't appear to make any difference in the display of the calendar
+*/
+
+#share {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+#page {
+	position: relative;
+	margin: 1em auto;
+	padding: 2em;
+	width: 960px;
+	background: white url('images/ui-bg_fine-grain_10_f8f7f6_60x60.png') repeat;
+}
+
+#demos-list {padding: 0;}
+
+#flairs {text-align: center;}
+#flairs ul {list-style: none; padding: 0;}
+#flairs li {display: inline;}
+
+.demo {
+	vertical-align: top;
+	border-radius: 10px;
+}
+
+.demo.full-row {
+	width: 95%;
+}
+
+.demo ul, .demo ol {list-style-position: inside;}
+.demo .box {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+
+.example {
+	color: #006400;
+}
+
+.important-note {
+	font-weight: bold;
+	color: #B22222;
+}
+
+.code-box {clear:both;}
+.code {
+	padding: 5px;
+	color: #333;
+	background-color: white;
+	font: small monospace;
+}
+
+/* begin: jQuery UI Datepicker moving pixels fix */
+table.ui-datepicker-calendar {border-collapse: separate;}
+.ui-datepicker-calendar td {border: 0px solid transparent;}
+/* end: jQuery UI Datepicker moving pixels fix */
+
+/* begin: jQuery UI Datepicker emphasis on selected dates */
+.ui-datepicker .ui-datepicker-calendar .ui-state-highlight a {
+	background: #637085 none;
+	color: white;
+}
+/* end: jQuery UI Datepicker emphasis on selected dates */
+
+/* begin: jQuery UI Datepicker hide datepicker helper */
+#ui-datepicker-div {display:none;}
+/* end: jQuery UI Datepicker hide datepicker helper */
+.ui-datepicker .ui-widget .ui-widget-content { background: #363636;}
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover  { background: #E6E6E6; font-weight: bold; color: #ffffff; cursor:pointer; }
+.ui-icon { width: 16px; height: 16px; background-image: url(images/ui-icons_222222_256x240.png); }
+.ui-widget-content .ui-icon {background-image: url(images/ui-icons_222222_256x240.png); }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-n { background-position: -96px -192px; }
+
+/* Corner radius */
+.ui-widget { font-family: Verdana,Arial,sans-serif/*{ffDefault}*/; font-size: 0.9em/*{fsDefault}*/; }
+.ui-widget .ui-widget { font-size: 1em; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Verdana,Arial,sans-serif/*{ffDefault}*/; font-size: 1em; }
+.atdw-multidatepicker .ui-widget-content { border: 1px solid #aaaaaa/*{borderColorContent}*/; background: #579BCC/*{bgColorContent}*/ url(images/ui-bg_flat_75_ffffff_40x100.png)/*{bgImgUrlContent}*/ 50%/*{bgContentXPos}*/ 50%/*{bgContentYPos}*/ repeat-x/*{bgContentRepeat}*/; color: #222222/*{fcContent}*/; }
+.ui-widget-content a { color: #222222/*{fcContent}*/; }
+.ui-widget-header { border: 1px solid #aaaaaa/*{borderColorHeader}*/; background: #637085/*{bgColorHeader}*/ url(images/ui-bg_highlight-soft_75_cccccc_1x100.png)/*{bgImgUrlHeader}*/ 50%/*{bgHeaderXPos}*/ 50%/*{bgHeaderYPos}*/ repeat-x/*{bgHeaderRepeat}*/; color: White/*{fcHeader}*/; font-weight: bold; }
+.ui-widget-header a { color: #222222/*{fcHeader}*/; }
+
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { -moz-border-radius-topleft: 5px/*{cornerRadius}*/; -webkit-border-top-left-radius: 5px/*{cornerRadius}*/; -khtml-border-top-left-radius: 5px/*{cornerRadius}*/; border-top-left-radius: 5px/*{cornerRadius}*/; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { -moz-border-radius-topright: 5px/*{cornerRadius}*/; -webkit-border-top-right-radius: 5px/*{cornerRadius}*/; -khtml-border-top-right-radius: 5px/*{cornerRadius}*/; border-top-right-radius: 5px/*{cornerRadius}*/; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { -moz-border-radius-bottomleft: 5px/*{cornerRadius}*/; -webkit-border-bottom-left-radius: 5px/*{cornerRadius}*/; -khtml-border-bottom-left-radius: 5px/*{cornerRadius}*/; border-bottom-left-radius: 5px/*{cornerRadius}*/; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { -moz-border-radius-bottomright: 5px/*{cornerRadius}*/; -webkit-border-bottom-right-radius: 5px/*{cornerRadius}*/; -khtml-border-bottom-right-radius: 5px/*{cornerRadius}*/; border-bottom-right-radius: 5px/*{cornerRadius}*/; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #d3d3d3/*{borderColorDefault}*/; background: #e6e6e6/*{bgColorDefault}*/ url(images/ui-bg_glass_75_e6e6e6_1x400.png)/*{bgImgUrlDefault}*/ 50%/*{bgDefaultXPos}*/ 50%/*{bgDefaultYPos}*/ repeat-x/*{bgDefaultRepeat}*/; font-weight: normal/*{fwDefault}*/; color: #555555/*{fcDefault}*/; }
